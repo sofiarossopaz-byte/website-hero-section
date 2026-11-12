@@ -67,7 +67,7 @@ h1 span {
 
 h2 {
     margin: 0 0 18px; /* Agrega espacio inferior */
-    color: #55574e; /* Define un color secundario */
+    color: #84412f; /* Define un color secundario */
     font-size: 19px; /* Define el tamaño */
     font-weight: normal; /* Usa un grosor normal */
 }
@@ -91,7 +91,7 @@ h2 {
     border-radius: 30px; /* Redondea las esquinas */
     background-color: #343b32; /* Define el fondo verde oscuro */
     color: #ffffff; /* Define el texto blanco */
-    font-size: 14px; /* Define el tamaño del texto */
+    font-size: 26px; /* Define el tamaño del texto */
     font-weight: bold; /* Resalta el texto */
     text-decoration: none; /* Elimina el subrayado */
     transition: background-color 0.2s ease,
