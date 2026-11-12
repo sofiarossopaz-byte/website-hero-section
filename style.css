@@ -1,0 +1,350 @@
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box; /* Incluye bordes y espacios en el tamaño total */
+}
+
+body {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: Arial, Helvetica, sans-serif; /* Define la tipografía */
+    color: #292b25; /* Establece el color principal del texto */
+    background-color: #f4f1e9; /* Define un fondo neutro */
+}
+
+
+/* =========================================
+   2. SECCIÓN PRINCIPAL HERO
+========================================= */
+
+.hero {
+    min-height: 680px; /* Define la altura mínima */
+    padding: 72px 8%; /* Agrega espacio interior */
+    display: flex; /* Coloca los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye el espacio */
+    gap: 48px; /* Separa las columnas */
+    overflow: hidden; /* Evita desbordamientos */
+    background: linear-gradient(
+        115deg,
+        #f4f1e9,
+        #e8e4d8
+    ); /* Crea un fondo degradado */
+}
+
+
+/* =========================================
+   3. CONTENIDO DE TEXTO
+========================================= */
+
+.hero-content {
+    max-width: 540px; /* Limita el ancho del contenido */
+    flex: 1; /* Permite ocupar el espacio disponible */
+}
+
+.eyebrow {
+    margin: 0 0 22px; /* Agrega espacio inferior */
+    color: #8a765b; /* Define un color tierra */
+    font-size: 12px; /* Define el tamaño del texto */
+    font-weight: bold; /* Coloca el texto en negrita */
+    letter-spacing: 3px; /* Separa las letras */
+}
+
+h1 {
+    margin: 0 0 20px; /* Agrega espacio inferior */
+    font-family: Georgia, "Times New Roman", serif; /* Define una tipografía elegante */
+    font-size: clamp(42px, 5vw, 68px); /* Ajusta el tamaño según la pantalla */
+    line-height: 1.08; /* Controla la separación entre líneas */
+    font-weight: normal; /* Elimina la negrita predeterminada */
+}
+
+h1 span {
+    color: #9b7955; /* Resalta una palabra */
+    font-style: italic; /* Aplica cursiva */
+}
+
+h2 {
+    margin: 0 0 18px; /* Agrega espacio inferior */
+    color: #55574e; /* Define un color secundario */
+    font-size: 19px; /* Define el tamaño */
+    font-weight: normal; /* Usa un grosor normal */
+}
+
+.description {
+    max-width: 490px; /* Limita el ancho del párrafo */
+    margin: 0 0 30px; /* Agrega espacio inferior */
+    color: #68695f; /* Define el color del texto */
+    font-size: 16px; /* Define el tamaño de fuente */
+    line-height: 1.8; /* Mejora la legibilidad */
+}
+
+
+/* =========================================
+   4. BOTÓN DE ACCIÓN
+========================================= */
+
+.cta-button {
+    display: inline-block; /* Permite aplicar dimensiones */
+    padding: 15px 25px; /* Agrega espacio interior */
+    border-radius: 30px; /* Redondea las esquinas */
+    background-color: #343b32; /* Define el fondo verde oscuro */
+    color: #ffffff; /* Define el texto blanco */
+    font-size: 14px; /* Define el tamaño del texto */
+    font-weight: bold; /* Resalta el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: background-color 0.2s ease,
+                transform 0.2s ease; /* Suaviza las transiciones */
+}
+
+.cta-button:hover {
+    background-color: #59664f; /* Cambia el color al pasar el cursor */
+    transform: translateY(-2px); /* Eleva ligeramente el botón */
+}
+
+
+/* =========================================
+   5. ILUSTRACIÓN DE LA SILLA
+========================================= */
+
+.hero-art {
+    position: relative; /* Permite posicionar elementos internos */
+    width: min(46vw, 550px); /* Define un ancho adaptable */
+    height: 470px; /* Define la altura */
+    flex: 0 1 550px; /* Permite reducir el tamaño */
+    display: flex; /* Activa la distribución flexible */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+
+/* Brillo de fondo */
+
+.art-glow {
+    position: absolute; /* Posiciona el brillo */
+    width: 390px; /* Define el ancho */
+    height: 390px; /* Define la altura */
+    border-radius: 50%; /* Crea una forma circular */
+    background: radial-gradient(
+        circle,
+        #d5c9b4 0%,
+        #e8e1d4 48%,
+        transparent 72%
+    ); /* Crea un efecto de iluminación */
+}
+
+
+/* Estructura de la silla */
+
+.chair {
+    position: relative; /* Organiza las partes de la silla */
+    width: 270px; /* Define el ancho */
+    height: 330px; /* Define la altura */
+    z-index: 1; /* Coloca la silla delante del brillo */
+    animation: hover 3.5s ease-in-out infinite; /* Activa la animación */
+}
+
+
+/* Respaldo */
+
+.backrest {
+    position: absolute; /* Posiciona el respaldo */
+    top: 8px; /* Define la posición superior */
+    left: 68px; /* Define la posición izquierda */
+    width: 142px; /* Define el ancho */
+    height: 175px; /* Define la altura */
+    border: 13px solid #59634f; /* Define el borde */
+    border-radius: 65px 65px 38px 38px; /* Redondea las esquinas */
+    background: linear-gradient(
+        135deg,
+        #a8ad96,
+        #737e69
+    ); /* Aplica un degradado */
+    box-shadow: 12px 16px 24px rgba(48, 53, 43, 0.15); /* Agrega sombra */
+}
+
+
+/* Asiento */
+
+.seat {
+    position: absolute; /* Posiciona el asiento */
+    top: 176px; /* Define la posición superior */
+    left: 38px; /* Define la posición izquierda */
+    width: 200px; /* Define el ancho */
+    height: 55px; /* Define la altura */
+    border: 8px solid #59634f; /* Define el borde */
+    border-radius: 35px 35px 24px 24px; /* Redondea las esquinas */
+    background: linear-gradient(
+        120deg,
+        #9ca58c,
+        #68745f
+    ); /* Aplica un degradado */
+    box-shadow: 0 12px 20px rgba(48, 53, 43, 0.16); /* Agrega profundidad */
+}
+
+
+/* Soporte central */
+
+.support {
+    position: absolute; /* Posiciona el soporte */
+    top: 225px; /* Define la posición superior */
+    left: 127px; /* Centra el soporte */
+    width: 16px; /* Define el ancho */
+    height: 60px; /* Define la altura */
+    border-radius: 10px; /* Redondea las esquinas */
+    background: #777b70; /* Define el color */
+}
+
+
+/* Base */
+
+.base {
+    position: absolute; /* Posiciona la base */
+    top: 277px; /* Define la posición superior */
+    left: 69px; /* Centra la base */
+    width: 132px; /* Define el ancho */
+    height: 12px; /* Define la altura */
+    border-radius: 50%; /* Crea una forma ovalada */
+    background: #454c42; /* Define el color */
+}
+
+
+/* Brazos de la silla */
+
+.arm {
+    position: absolute; /* Posiciona los brazos */
+    top: 190px; /* Define la posición superior */
+    width: 15px; /* Define el ancho */
+    height: 55px; /* Define la altura */
+    border-radius: 10px; /* Redondea las esquinas */
+    background: #59634f; /* Define el color */
+}
+
+.arm-left {
+    left: 25px; /* Posiciona el brazo izquierdo */
+}
+
+.arm-right {
+    right: 25px; /* Posiciona el brazo derecho */
+}
+
+
+/* Sombra inferior */
+
+.floating-shadow {
+    position: absolute; /* Posiciona la sombra */
+    bottom: 47px; /* Define la posición inferior */
+    width: 235px; /* Define el ancho */
+    height: 27px; /* Define la altura */
+    border-radius: 50%; /* Crea una forma ovalada */
+    background: rgba(67, 69, 56, 0.18); /* Define el color */
+    filter: blur(12px); /* Suaviza los bordes */
+    animation: shadow 3.5s ease-in-out infinite; /* Anima la sombra */
+}
+
+
+/* Etiqueta decorativa */
+
+.art-label {
+    position: absolute; /* Posiciona la etiqueta */
+    right: 0; /* Alinea a la derecha */
+    bottom: 20px; /* Define la posición inferior */
+    color: #8a765b; /* Define el color */
+    font-size: 10px; /* Define el tamaño */
+    letter-spacing: 2px; /* Separa las letras */
+}
+
+
+/* =========================================
+   6. ANIMACIONES
+========================================= */
+
+@keyframes hover {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+
+    50% {
+        transform: translateY(-12px); /* Movimiento hacia arriba */
+    }
+}
+
+@keyframes shadow {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+        opacity: 0.8; /* Visibilidad normal */
+    }
+
+    50% {
+        transform: scale(0.82); /* Reduce el tamaño */
+        opacity: 0.45; /* Reduce la visibilidad */
+    }
+}
+
+
+/* =========================================
+   7. SECCIÓN COMPLEMENTARIA
+========================================= */
+
+.discover {
+    padding: 25px 8%; /* Agrega espacio interior */
+    text-align: center; /* Centra el contenido */
+    color: #68695f; /* Define el color del texto */
+    background-color: #f4f1e9; /* Define el fondo */
+}
+
+
+/* =========================================
+   8. DISEÑO RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding: 55px 7%; /* Reduce el espacio exterior */
+        flex-direction: column; /* Apila las columnas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .description {
+        margin-right: auto; /* Centra el párrafo */
+        margin-left: auto; /* Centra el párrafo */
+    }
+
+    .hero-art {
+        width: 100%; /* Ocupa el ancho disponible */
+        max-width: 500px; /* Limita el ancho */
+        height: 420px; /* Reduce la altura */
+        flex-basis: auto; /* Ajusta el tamaño automáticamente */
+    }
+}
+
+@media (max-width: 420px) {
+
+    .hero {
+        padding-top: 42px; /* Reduce el espacio superior */
+    }
+
+    .hero-art {
+        transform: scale(0.88); /* Reduce el tamaño de la ilustración */
+        margin-top: -15px; /* Reduce el espacio superior */
+    }
+}
+
+
+/* =========================================
+   9. ACCESIBILIDAD
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .chair,
+    .floating-shadow {
+        animation: none; /* Desactiva las animaciones */
+    }
+
+    .cta-button {
+        transition: none; /* Elimina las transiciones */
+    }
+}
