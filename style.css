@@ -53,11 +53,13 @@ body {
 }
 
 h1 {
+    h1 {
     margin: 0 0 20px; /* Agrega espacio inferior */
-    font-family: Georgia, "Times New Roman", serif; /* Define una tipografía elegante */
-    font-size: clamp(42px, 5vw, 68px); /* Ajusta el tamaño según la pantalla */
+    font-family: 'Rubik', sans-serif; /* Aplica la fuente Rubik */
+    font-size: clamp(88px, 10vw, 118px); /* Ajusta el tamaño según la pantalla */
     line-height: 1.08; /* Controla la separación entre líneas */
-    font-weight: normal; /* Elimina la negrita predeterminada */
+    font-weight: 500; /* Define el grosor de la fuente */
+}
 }
 
 h1 span {
@@ -111,8 +113,8 @@ h2 {
 .hero-art {
     position: relative; /* Permite posicionar elementos internos */
     width: min(46vw, 550px); /* Define un ancho adaptable */
-    height: 470px; /* Define la altura */
-    flex: 0 1 550px; /* Permite reducir el tamaño */
+    height: 440px; /* Define la altura */
+    flex: 0 1 510px; /* Permite reducir el tamaño */
     display: flex; /* Activa la distribución flexible */
     align-items: center; /* Centra verticalmente */
     justify-content: center; /* Centra horizontalmente */
@@ -123,13 +125,13 @@ h2 {
 
 .art-glow {
     position: absolute; /* Posiciona el brillo */
-    width: 390px; /* Define el ancho */
-    height: 390px; /* Define la altura */
+    width: 420px; /* Define el ancho */
+    height: 420px; /* Define la altura */
     border-radius: 50%; /* Crea una forma circular */
     background: radial-gradient(
         circle,
-        #d5c9b4 0%,
-        #e8e1d4 48%,
+        #d2ad6e 0%,
+        #cbbda1 48%,
         transparent 72%
     ); /* Crea un efecto de iluminación */
 }
